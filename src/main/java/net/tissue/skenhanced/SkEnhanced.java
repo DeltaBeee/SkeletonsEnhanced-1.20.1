@@ -1,6 +1,7 @@
 package net.tissue.skenhanced;
 
 import com.mojang.logging.LogUtils;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.tissue.skenhanced.init.TBlocks;
 import net.tissue.skenhanced.init.TEntities;
 import net.tissue.skenhanced.init.TItems;
@@ -70,7 +71,15 @@ public class SkEnhanced {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            LOGGER.info("Oh hey, how are you >> {}", Minecraft.getInstance().getUser().getName());
+            LOGGER.info("Oh hey, how are you {}", Minecraft.getInstance().getUser().getName());
+        }
+        @SubscribeEvent
+        public static void registerRenderers(final EntityRenderersEvent.RegisterRenderers event) {
+            // renderers
+            //event.registerEntityRenderer(TEntities.ICE_SPIKES_SKELETON.get(), IceSpikesRenderer::new);
+
+            // replacement renderers
+            //event.registerEntityRenderer(EntityType.SKELETON, VanillaSkeletonRenderer::new);
         }
     }
 }
