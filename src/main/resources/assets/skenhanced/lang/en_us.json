@@ -1,3 +1,7 @@
 {
+  "entity.skenhanced.ice_spikes_skeleton": "Ice Spikes Skeleton",
+  "entity.skenhanced.old_growth_taiga_skeleton": "Old Growth Taiga Skeleton",
 
+  "item.skenhanced.ice_spikes_skeleton_spawn_egg": "Ice Spikes Skeleton Spawn Egg",
+  "item.skenhanced.old_growth_taiga_skeleton_spawn_egg": "Old Growth Taiga Skeleton Spawn Egg"
 }
