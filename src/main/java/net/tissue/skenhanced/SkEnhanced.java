@@ -1,11 +1,10 @@
 package net.tissue.skenhanced;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.tissue.skenhanced.init.TBlocks;
-import net.tissue.skenhanced.init.TEntities;
-import net.tissue.skenhanced.init.TItems;
-import net.tissue.skenhanced.init.TTabs;
+import net.tissue.skenhanced.entity.client.gecko.renderer.IceSpikeSkeletonRenderer;
+import net.tissue.skenhanced.init.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
@@ -34,10 +33,12 @@ public class SkEnhanced {
     public SkEnhanced() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         // registry registration
+
         TBlocks.register(bus);
-        TEntities.register(bus);
+        EffectsInit.MOB_EFFECT_DEFERRED_REGISTER.register(bus);
         TItems.register(bus);
         TTabs.register(bus);
+        TEntities.register(bus);
         // registry end
         bus.addListener(this::commonSetup);
 
@@ -71,6 +72,7 @@ public class SkEnhanced {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(TEntities.ICE_SPIKE_SKELETON.get(), IceSpikeSkeletonRenderer::new);
             LOGGER.info("Oh hey, how are you {}", Minecraft.getInstance().getUser().getName());
         }
         @SubscribeEvent

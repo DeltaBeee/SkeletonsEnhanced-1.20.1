@@ -9,8 +9,8 @@ import net.tissue.skenhanced.init.TEntities;
 
 @Mod.EventBusSubscriber(modid = SkEnhanced.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class TEvents {
-    /*@SubscribeEvent
-    public static void entityAttributeAssignment(EntityAttributeCreationEvent event) {
-        event.put(TEntities.ICE_SPIKES_SKELETON.get(), IceSpikesSkeleton.setAttributes());
-    }*/
+    @SubscribeEvent
+    public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
+        event.put(TEntities.ICE_SPIKE_SKELETON.get(), IceSpikesSkeleton.setAttributes());
+    }
 }

@@ -23,8 +23,13 @@ public class GenericSkeleton extends AbstractSkeleton {
     private final boolean isMelee = false;
     private final double meleeDamage = 4.0D;
     private final float mobSize = 1.74F;
+
+    public void setInfliction(@Nullable MobEffect infliction) {
+        this.infliction = infliction;
+    }
+
     @Nullable
-    private final MobEffect infliction = null;
+    private  MobEffect infliction = null;
     private final int ticksInflicted = 0;
     private final int secondsIgnited = 0;
 
@@ -48,6 +53,8 @@ public class GenericSkeleton extends AbstractSkeleton {
         }
         return spawngroupdata;
     }
+
+
 
     public boolean doHurtTarget(Entity pEntity) {
         if (!super.doHurtTarget(pEntity)) {
