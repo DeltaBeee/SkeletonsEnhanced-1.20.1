@@ -10,6 +10,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.tissue.skenhanced.SkEnhanced;
 import net.tissue.skenhanced.entity.skeletons.IceSpikesSkeleton;
+import net.tissue.skenhanced.entity.skeletons.OldGrowthSkeleton;
 
 public class TEntities {
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, SkEnhanced.MOD_ID);
@@ -18,10 +19,16 @@ public class TEntities {
 
 
     public static final RegistryObject<EntityType<IceSpikesSkeleton>> ICE_SPIKE_SKELETON =
-            ENTITIES.register("ice_spike_skeleton",
-                    () -> EntityType.Builder.of(IceSpikesSkeleton::new, MobCategory.MONSTER)
-                            .sized(1.5f, 1.75f)
-                            .build(new ResourceLocation(SkEnhanced.MOD_ID, "ice_spike_skeleton").toString()));
+            ENTITIES.register("ice_spike_skeleton", () -> EntityType.Builder.of(IceSpikesSkeleton::new, MobCategory.MONSTER)
+                    .sized(1f, 2.3f).build("ice_spike_skeleton"));
+
+
+    public static final RegistryObject<EntityType<OldGrowthSkeleton>> Old_Growth_SKELETON =
+            ENTITIES.register("old_growth_skeleton", () -> EntityType.Builder.of(OldGrowthSkeleton::new, MobCategory.MONSTER)
+                    .sized(1f, 2.3f).build("old_growth_skeleton"));
+
+
+
 
 
     // helper methods

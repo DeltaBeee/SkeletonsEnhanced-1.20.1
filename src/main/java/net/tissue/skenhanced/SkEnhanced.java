@@ -3,7 +3,11 @@ package net.tissue.skenhanced;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.tissue.skenhanced.entity.client.gecko.model.OldGrowthSkeletonModel;
+import net.minecraft.client.model.EntityModel;
 import net.tissue.skenhanced.entity.client.gecko.renderer.IceSpikeSkeletonRenderer;
+import net.tissue.skenhanced.entity.client.gecko.renderer.OldGrowthSkeletonRenderer;
+import net.tissue.skenhanced.entity.skeletons.OldGrowthSkeleton;
 import net.tissue.skenhanced.init.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -73,6 +77,16 @@ public class SkEnhanced {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(TEntities.ICE_SPIKE_SKELETON.get(), IceSpikeSkeletonRenderer::new);
+            EntityRenderers.register(TEntities.Old_Growth_SKELETON.get(), OldGrowthSkeletonRenderer::new);
+            /*
+            EntityRenderers.register(TEntities.Old_Growth_SKELETON.get(), (context) -> {
+                return new OldGrowthSkeletonRenderer(context, OldGrowthSkeletonModel);
+            });
+
+             */
+
+
+
             LOGGER.info("Oh hey, how are you {}", Minecraft.getInstance().getUser().getName());
         }
         @SubscribeEvent

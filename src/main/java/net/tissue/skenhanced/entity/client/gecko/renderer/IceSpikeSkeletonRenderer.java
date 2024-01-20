@@ -5,13 +5,13 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.tissue.skenhanced.SkEnhanced;
-import net.tissue.skenhanced.entity.client.gecko.model.GeoIceSpikesSkeletonModel;
+import net.tissue.skenhanced.entity.client.gecko.model.IceSpikesSkeletonModel;
 import net.tissue.skenhanced.entity.skeletons.IceSpikesSkeleton;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
 public class IceSpikeSkeletonRenderer extends GeoEntityRenderer<IceSpikesSkeleton> {
     public IceSpikeSkeletonRenderer(EntityRendererProvider.Context renderManager) {
-        super(renderManager, new GeoIceSpikesSkeletonModel());
+        super(renderManager, new IceSpikesSkeletonModel());
     }
 
     @Override
