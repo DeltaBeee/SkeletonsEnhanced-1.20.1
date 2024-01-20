@@ -1,5 +1,6 @@
 package net.tissue.skenhanced.entity.skeletons;
 
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -60,30 +61,25 @@ public class OldGrowthSkeleton extends BaseSkeleton implements GeoEntity {
         return false;
     }
 
-    public int getTime() {
-        return alpha;
-    }
 
-    float time = 0;
-    int alpha = 0;
 
+
+boolean check = false;
     @Override
     public void tick() {
-        time++;
+
     super.tick();
-    if(time > 100) {
-        this.setVariant(OldGrowthVariant.GHOST_VARIANT);
-    }
-    else {
-        this.setVariant(OldGrowthVariant.DEFAULT);
+
+    if(check && this.level().isDay()) {
+        this.AlternateState();
+        check = false;
+    }else  if(!check && this.level().isNight()) {
+        this.AlternateState();
+        check = true;
     }
 
-        // System.out.println(
-         //        "speed = " + Attributes.MOVEMENT_SPEED.getDefaultValue() +
-       //          " damage =" + Attributes.ATTACK_DAMAGE.getDefaultValue() +
-       //          " Health = " + Attributes.MAX_HEALTH.getDefaultValue());
 
-        //setAlpha(getAlpha() + 0.001F);
+
 
     }
 
@@ -116,23 +112,35 @@ public class OldGrowthSkeleton extends BaseSkeleton implements GeoEntity {
     private static final EntityDataAccessor<Integer> DATA_ID_TYPE_VARIANT =
             SynchedEntityData.defineId(OldGrowthSkeleton.class, EntityDataSerializers.INT);
 
+    private static final EntityDataAccessor<Boolean> State =
+            SynchedEntityData.defineId(OldGrowthSkeleton.class, EntityDataSerializers.BOOLEAN);
+
+    private static final EntityDataAccessor<Boolean> CHECK =
+            SynchedEntityData.defineId(OldGrowthSkeleton.class, EntityDataSerializers.BOOLEAN);
 
     @Override
     public void readAdditionalSaveData(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
         this.entityData.set(DATA_ID_TYPE_VARIANT, tag.getInt("Variant"));
+        this.entityData.set(State, tag.getBoolean("State"));
+        this.entityData.set(CHECK, tag.getBoolean("Check"));
+
     }
 
     @Override
     public void addAdditionalSaveData(CompoundTag tag) {
         super.addAdditionalSaveData(tag);
         tag.putInt("Variant", this.getTypeVariant());
+        tag.putBoolean("State", false);
+        tag.putBoolean("Check", false);
     }
 
     @Override
     protected void defineSynchedData() {
         super.defineSynchedData();
         this.entityData.define(DATA_ID_TYPE_VARIANT, 0);
+        this.entityData.define(State, false);
+        this.entityData.define(CHECK, false);
     }
 
 
@@ -146,5 +154,28 @@ public class OldGrowthSkeleton extends BaseSkeleton implements GeoEntity {
 
     private void setVariant(OldGrowthVariant variant) {
         this.entityData.set(DATA_ID_TYPE_VARIANT, variant.getId() & 255);
+    }
+
+
+    private boolean getState() {
+        return this.entityData.get(State);
+    }
+
+    private boolean getCheck() {
+        return this.entityData.get(State);
+    }
+
+
+
+    private void AlternateState() {
+
+        this.entityData.set(State, !getState());
+        System.out.println(getState());
+        if(getState()) {
+            this.setVariant(OldGrowthVariant.DEFAULT);
+        }
+        else {
+            this.setVariant(OldGrowthVariant.GHOST_VARIANT);
+        }
     }
 }
