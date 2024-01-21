@@ -1,18 +1,12 @@
 package net.tissue.skenhanced;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.tissue.skenhanced.entity.client.gecko.model.OldGrowthSkeletonModel;
-import net.minecraft.client.model.EntityModel;
-import net.tissue.skenhanced.entity.client.gecko.renderer.IceSpikeSkeletonRenderer;
-import net.tissue.skenhanced.entity.client.gecko.renderer.OldGrowthSkeletonRenderer;
-import net.tissue.skenhanced.entity.skeletons.OldGrowthSkeleton;
-import net.tissue.skenhanced.init.*;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -25,6 +19,11 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.RegistryObject;
+import net.tissue.skenhanced.entity.client.renderer.DesertSkeletonRenderer;
+import net.tissue.skenhanced.entity.client.renderer.IceSpikeSkeletonRenderer;
+import net.tissue.skenhanced.entity.client.renderer.JungleSkeletonRenderer;
+import net.tissue.skenhanced.entity.client.renderer.OldGrowthSkeletonRenderer;
+import net.tissue.skenhanced.init.*;
 import org.slf4j.Logger;
 
 import java.util.List;
@@ -37,12 +36,11 @@ public class SkEnhanced {
     public SkEnhanced() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         // registry registration
-
-        TBlocks.register(bus);
+        BlockInit.register(bus);
         EffectsInit.MOB_EFFECT_DEFERRED_REGISTER.register(bus);
-        TItems.register(bus);
-        TTabs.register(bus);
-        TEntities.register(bus);
+        ItemInit.register(bus);
+        TabInit.register(bus);
+        EntityInit.register(bus);
         // registry end
         bus.addListener(this::commonSetup);
 
@@ -57,7 +55,7 @@ public class SkEnhanced {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         // Adds everything to Search Tab, since I'm too lazy to /give during debug.
         if (event.getTabKey() == CreativeModeTabs.SEARCH) {
-            List<Item> items = TItems.ITEMS.getEntries()
+            List<Item> items = ItemInit.ITEMS.getEntries()
                     .stream()
                     .map(RegistryObject::get)
                     .toList();
@@ -76,8 +74,11 @@ public class SkEnhanced {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            EntityRenderers.register(TEntities.ICE_SPIKE_SKELETON.get(), IceSpikeSkeletonRenderer::new);
-            EntityRenderers.register(TEntities.Old_Growth_SKELETON.get(), OldGrowthSkeletonRenderer::new);
+            EntityRenderers.register(EntityInit.ICE_SPIKE_SKELETON.get(), IceSpikeSkeletonRenderer::new);
+            EntityRenderers.register(EntityInit.OLD_GROWTH_SKELETON.get(), OldGrowthSkeletonRenderer::new);
+            EntityRenderers.register(EntityInit.DESERT_SKELETON.get(), DesertSkeletonRenderer::new);
+            EntityRenderers.register(EntityInit.JUNGLE_SKELETON.get(), JungleSkeletonRenderer::new);
+
             /*
             EntityRenderers.register(TEntities.Old_Growth_SKELETON.get(), (context) -> {
                 return new OldGrowthSkeletonRenderer(context, OldGrowthSkeletonModel);
@@ -92,7 +93,7 @@ public class SkEnhanced {
         @SubscribeEvent
         public static void registerRenderers(final EntityRenderersEvent.RegisterRenderers event) {
             // renderers
-            //event.registerEntityRenderer(TEntities.ICE_SPIKES_SKELETON.get(), IceSpikesRenderer::new);
+            //event.registerEntityRenderer(EntityInit.ICE_SPIKE_SKELETON.get(), IceSpikeSkeletonRenderer::new);
 
             // replacement renderers
             //event.registerEntityRenderer(EntityType.SKELETON, VanillaSkeletonRenderer::new);

@@ -5,7 +5,7 @@ import java.util.Comparator;
 
 public enum OldGrowthVariant {
     DEFAULT(0),
-    GHOST_VARIANT(3);
+    GHOST_VARIANT(2);
 
 
     private static final OldGrowthVariant[] BY_ID = Arrays.stream(values()).sorted(Comparator.

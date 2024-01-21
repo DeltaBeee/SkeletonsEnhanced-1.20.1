@@ -172,10 +172,10 @@ boolean check = false;
         this.entityData.set(State, !getState());
         System.out.println(getState());
         if(getState()) {
-            this.setVariant(OldGrowthVariant.DEFAULT);
+            this.setVariant(OldGrowthVariant.GHOST_VARIANT);
         }
         else {
-            this.setVariant(OldGrowthVariant.GHOST_VARIANT);
+            this.setVariant(OldGrowthVariant.DEFAULT);
         }
     }
 }

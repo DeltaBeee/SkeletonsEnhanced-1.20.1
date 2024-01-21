@@ -277,6 +277,54 @@
 				}
 			}
 		},
+		"animation.skeleton.attack2": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"body": {
+					"rotation": {
+						"vector": [12.6162, 14.50082, 3.24023]
+					}
+				},
+				"head": {
+					"rotation": {
+						"vector": [-12.43012, -14.82072, 0]
+					}
+				},
+				"left_arm": {
+					"rotation": {
+						"vector": [-23.70348, 14.36495, 29.47028]
+					}
+				},
+				"right_arm": {
+					"rotation": {
+						"vector": [-23.66235, -8.31087, -18.25612]
+					}
+				}
+			}
+		},
+		"animation.skeleton.attack3": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"left_arm": {
+					"rotation": {
+						"vector": [-96.76154, 22.17025, 3.09311]
+					},
+					"position": {
+						"vector": [0, 0, 2]
+					}
+				},
+				"right_arm": {
+					"rotation": {
+						"vector": [-96.76154, -22.17025, -3.09311]
+					},
+					"position": {
+						"vector": [0, 0, 2]
+					}
+				}
+			}
+		},
 		"animation.skeleton.arm_walk": {
 			"loop": true,
 			"animation_length": 2,

@@ -1,12 +1,11 @@
-package net.tissue.skenhanced.entity.client.gecko.model;
+package net.tissue.skenhanced.entity.client.model;
 
 import net.minecraft.resources.ResourceLocation;
 import net.tissue.skenhanced.SkEnhanced;
 import net.tissue.skenhanced.entity.skeletons.IceSpikesSkeleton;
-import net.tissue.skenhanced.entity.skeletons.gecko.GeoIceSpikesSkeleton;
 import software.bernie.geckolib.model.GeoModel;
 
-public class GeoIceSpikesSkeletonModel extends GeoModel<IceSpikesSkeleton> {
+public class IceSpikesSkeletonModel extends GeoModel<IceSpikesSkeleton> {
 
     @Override
     public ResourceLocation getModelResource(IceSpikesSkeleton animatable) {

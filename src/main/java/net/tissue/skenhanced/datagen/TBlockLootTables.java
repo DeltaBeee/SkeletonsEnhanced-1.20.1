@@ -1,6 +1,6 @@
 package net.tissue.skenhanced.datagen;
 
-import net.tissue.skenhanced.init.TBlocks;
+import net.tissue.skenhanced.init.BlockInit;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
@@ -22,6 +22,6 @@ public class TBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return TBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
+        return BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
     }
 }
