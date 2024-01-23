@@ -19,6 +19,10 @@ public class EntityInit {
             ENTITIES.register("cave_skeleton", () -> EntityType.Builder.of(CaveSkeleton::new, MobCategory.MONSTER)
                     .sized(0.3f, 0.98f).build("cave_skeleton"));
 
+    public static final RegistryObject<EntityType<CrimsonSkeleton>> CRIMSON_SKELETON =
+            ENTITIES.register("crimson_skeleton", () -> EntityType.Builder.of(CrimsonSkeleton::new, MobCategory.MONSTER)
+                    .sized(0.6f, 1.99f).build("crimson_skeleton"));
+
     public static final RegistryObject<EntityType<DesertSkeleton>> DESERT_SKELETON =
             ENTITIES.register("desert_skeleton", () -> EntityType.Builder.of(DesertSkeleton::new, MobCategory.MONSTER)
                     .sized(0.6f, 1.99f).build("desert_skeleton"));
@@ -39,6 +43,10 @@ public class EntityInit {
             ENTITIES.register("jungle_skeleton", () -> EntityType.Builder.of(JungleSkeleton::new, MobCategory.MONSTER)
                     .sized(0.6f, 1.99f).build("jungle_skeleton"));
 
+    public static final RegistryObject<EntityType<MushroomSkeleton>> MUSHROOM_SKELETON =
+            ENTITIES.register("mushroom_skeleton", () -> EntityType.Builder.of(MushroomSkeleton::new, MobCategory.CREATURE)
+                    .sized(0.6f, 1.99f).build("mushroom_skeleton"));
+
     public static final RegistryObject<EntityType<OceanSkeleton>> OCEAN_SKELETON =
             ENTITIES.register("ocean_skeleton", () -> EntityType.Builder.of(OceanSkeleton::new, MobCategory.MONSTER)
                     .sized(0.6f, 1.99f).build("ocean_skeleton"));
@@ -46,6 +54,10 @@ public class EntityInit {
     public static final RegistryObject<EntityType<OldGrowthSkeleton>> OLD_GROWTH_SKELETON =
             ENTITIES.register("old_growth_skeleton", () -> EntityType.Builder.of(OldGrowthSkeleton::new, MobCategory.MONSTER)
                     .sized(1f, 3.2f).build("old_growth_skeleton"));
+
+    public static final RegistryObject<EntityType<WarpedSkeleton>> WARPED_SKELETON =
+            ENTITIES.register("warped_skeleton", () -> EntityType.Builder.of(WarpedSkeleton::new, MobCategory.MONSTER)
+                    .sized(0.6f, 1.99f).build("warped_skeleton"));
 
 
 

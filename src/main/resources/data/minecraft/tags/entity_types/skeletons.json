@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "skenhanced:cave_skeleton",
+    "skenhanced:crimson_skeleton",
+    "skenhanced:desert_skeleton",
+    "skenhanced:farm_skeleton",
+    "skenhanced:honey_skeleton",
+    "skenhanced:ice_spike_skeleton",
+    "skenhanced:jungle_skeleton",
+    "skenhanced:mushroom_skeleton",
+    "skenhanced:ocean_skeleton",
+    "skenhanced:old_growth_skeleton",
+    "skenhanced:warped_skeleton"
+  ]
+}

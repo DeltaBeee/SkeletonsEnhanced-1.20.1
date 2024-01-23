@@ -1,19 +1,25 @@
 {
   "entity.skenhanced.cave_skeleton": "Cave Skeleton",
+  "entity.skenhanced.crimson_skeleton": "Crimson Skeleton",
   "entity.skenhanced.desert_skeleton": "Desert Skeleton",
   "entity.skenhanced.farm_skeleton": "Farm Skeleton",
   "entity.skenhanced.honey_skeleton": "Honey Skeleton",
   "entity.skenhanced.ice_spikes_skeleton": "Ice Spikes Skeleton",
   "entity.skenhanced.jungle_skeleton": "Jungle Skeleton",
+  "entity.skenhanced.mushroom_skeleton": "Mushroom Skeleton",
   "entity.skenhanced.ocean_skeleton": "Ocean Skeleton",
   "entity.skenhanced.old_growth_taiga_skeleton": "Old Growth Taiga Skeleton",
+  "entity.skenhanced.warped_skeleton": "Warped Skeleton",
 
   "item.skenhanced.cave_skeleton_spawn_egg": "Cave Skeleton Spawn Egg",
+  "item.skenhanced.crimson_skeleton_spawn_egg": "Crimson Skeleton Spawn Egg",
   "item.skenhanced.desert_skeleton_spawn_egg": "Desert Skeleton Spawn Egg",
   "item.skenhanced.farm_skeleton_spawn_egg": "Farm Skeleton Spawn Egg",
   "item.skenhanced.honey_skeleton_spawn_egg": "Honey Skeleton Spawn Egg",
   "item.skenhanced.ice_spike_skeleton_spawn_egg": "Ice Spikes Skeleton Spawn Egg",
   "item.skenhanced.jungle_skeleton_spawn_egg": "Jungle Skeleton Spawn Egg",
+  "item.skenhanced.mushroom_skeleton_spawn_egg": "Mushroom Skeleton Spawn Egg",
   "item.skenhanced.ocean_skeleton_spawn_egg": "Ocean Skeleton Spawn Egg",
-  "item.skenhanced.old_growth_skeleton_spawn_egg": "Old Growth Skeleton Spawn Egg"
+  "item.skenhanced.old_growth_skeleton_spawn_egg": "Old Growth Skeleton Spawn Egg",
+  "item.skenhanced.warped_skeleton_spawn_egg": "Warped Skeleton Spawn Egg"
 }

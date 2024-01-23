@@ -15,7 +15,7 @@ public class ReplacedWitherSkeletonModel extends DefaultedEntityGeoModel<Replace
     }
 
     public ResourceLocation buildFormattedAnimationPath(ResourceLocation basePath) {
-        return new ResourceLocation(basePath.getNamespace(), "animations/" + basePath.getPath() + ".animation.json");
+        return new ResourceLocation(basePath.getNamespace(), "animations/skeleton.animation.json");
     }
 
     @Override

@@ -1,9 +1,12 @@
-// 1.20.1	2024-01-22T04:12:21.6745877	Item Models: skenhanced
+// 1.20.1	2024-01-23T02:21:34.1756598	Item Models: skenhanced
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/skenhanced/models/item/cave_skeleton_spawn_egg.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/skenhanced/models/item/crimson_skeleton_spawn_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/skenhanced/models/item/desert_skeleton_spawn_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/skenhanced/models/item/farm_skeleton_spawn_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/skenhanced/models/item/honey_skeleton_spawn_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/skenhanced/models/item/ice_spike_skeleton_spawn_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/skenhanced/models/item/jungle_skeleton_spawn_egg.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/skenhanced/models/item/mushroom_skeleton_spawn_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/skenhanced/models/item/ocean_skeleton_spawn_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/skenhanced/models/item/old_growth_skeleton_spawn_egg.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/skenhanced/models/item/warped_skeleton_spawn_egg.json

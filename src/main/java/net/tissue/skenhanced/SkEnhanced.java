@@ -72,14 +72,16 @@ public class SkEnhanced {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(EntityInit.CAVE_SKELETON.get(), CaveSkeletonRenderer::new);
+            EntityRenderers.register(EntityInit.CRIMSON_SKELETON.get(), CrimsonSkeletonRenderer::new);
             EntityRenderers.register(EntityInit.DESERT_SKELETON.get(), DesertSkeletonRenderer::new);
             EntityRenderers.register(EntityInit.FARM_SKELETON.get(), FarmSkeletonRenderer::new);
             EntityRenderers.register(EntityInit.HONEY_SKELETON.get(), HoneySkeletonRenderer::new);
             EntityRenderers.register(EntityInit.ICE_SPIKE_SKELETON.get(), IceSpikeSkeletonRenderer::new);
             EntityRenderers.register(EntityInit.JUNGLE_SKELETON.get(), JungleSkeletonRenderer::new);
+            EntityRenderers.register(EntityInit.MUSHROOM_SKELETON.get(), MushroomSkeletonRenderer::new);
             EntityRenderers.register(EntityInit.OCEAN_SKELETON.get(), OceanSkeletonRenderer::new);
             EntityRenderers.register(EntityInit.OLD_GROWTH_SKELETON.get(), OldGrowthSkeletonRenderer::new);
-
+            EntityRenderers.register(EntityInit.WARPED_SKELETON.get(), WarpedSkeletonRenderer::new);
 
             EntityRenderers.register(EntityType.SKELETON, ReplacedSkeletonRenderer::new);
             EntityRenderers.register(EntityType.WITHER_SKELETON, ReplacedWitherSkeletonRenderer::new);
