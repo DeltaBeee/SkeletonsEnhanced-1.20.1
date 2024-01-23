@@ -1,0 +1,32 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.wither_skeleton.attack": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"body": {
+					"rotation": {
+						"vector": [12.6162, 14.50082, 3.24023]
+					}
+				},
+				"head": {
+					"rotation": {
+						"vector": [-12.43012, -14.82072, 0]
+					}
+				},
+				"left_arm": {
+					"rotation": {
+						"vector": [-23.70348, 14.36495, 29.47028]
+					}
+				},
+				"right_arm": {
+					"rotation": {
+						"vector": [-23.66235, -8.31087, -18.25612]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

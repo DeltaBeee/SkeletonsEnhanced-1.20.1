@@ -3,10 +3,10 @@ package net.tissue.skenhanced;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -19,10 +19,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.RegistryObject;
-import net.tissue.skenhanced.entity.client.renderer.DesertSkeletonRenderer;
-import net.tissue.skenhanced.entity.client.renderer.IceSpikeSkeletonRenderer;
-import net.tissue.skenhanced.entity.client.renderer.JungleSkeletonRenderer;
-import net.tissue.skenhanced.entity.client.renderer.OldGrowthSkeletonRenderer;
+import net.tissue.skenhanced.entity.client.renderer.*;
 import net.tissue.skenhanced.init.*;
 import org.slf4j.Logger;
 
@@ -74,10 +71,19 @@ public class SkEnhanced {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            EntityRenderers.register(EntityInit.ICE_SPIKE_SKELETON.get(), IceSpikeSkeletonRenderer::new);
-            EntityRenderers.register(EntityInit.OLD_GROWTH_SKELETON.get(), OldGrowthSkeletonRenderer::new);
+            EntityRenderers.register(EntityInit.CAVE_SKELETON.get(), CaveSkeletonRenderer::new);
             EntityRenderers.register(EntityInit.DESERT_SKELETON.get(), DesertSkeletonRenderer::new);
+            EntityRenderers.register(EntityInit.FARM_SKELETON.get(), FarmSkeletonRenderer::new);
+            EntityRenderers.register(EntityInit.HONEY_SKELETON.get(), HoneySkeletonRenderer::new);
+            EntityRenderers.register(EntityInit.ICE_SPIKE_SKELETON.get(), IceSpikeSkeletonRenderer::new);
             EntityRenderers.register(EntityInit.JUNGLE_SKELETON.get(), JungleSkeletonRenderer::new);
+            EntityRenderers.register(EntityInit.OCEAN_SKELETON.get(), OceanSkeletonRenderer::new);
+            EntityRenderers.register(EntityInit.OLD_GROWTH_SKELETON.get(), OldGrowthSkeletonRenderer::new);
+
+
+            EntityRenderers.register(EntityType.SKELETON, ReplacedSkeletonRenderer::new);
+            EntityRenderers.register(EntityType.WITHER_SKELETON, ReplacedWitherSkeletonRenderer::new);
+            EntityRenderers.register(EntityType.STRAY, ReplacedStrayRenderer::new);
 
             /*
             EntityRenderers.register(TEntities.Old_Growth_SKELETON.get(), (context) -> {
@@ -89,14 +95,6 @@ public class SkEnhanced {
 
 
             LOGGER.info("Oh hey, how are you {}", Minecraft.getInstance().getUser().getName());
-        }
-        @SubscribeEvent
-        public static void registerRenderers(final EntityRenderersEvent.RegisterRenderers event) {
-            // renderers
-            //event.registerEntityRenderer(EntityInit.ICE_SPIKE_SKELETON.get(), IceSpikeSkeletonRenderer::new);
-
-            // replacement renderers
-            //event.registerEntityRenderer(EntityType.SKELETON, VanillaSkeletonRenderer::new);
         }
     }
 }

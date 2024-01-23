@@ -1,13 +1,9 @@
 package net.tissue.skenhanced.entity.client.model;
 
-import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.resources.ResourceLocation;
 import net.tissue.skenhanced.SkEnhanced;
-import net.tissue.skenhanced.entity.skeletons.IceSpikesSkeleton;
 import net.tissue.skenhanced.entity.skeletons.OldGrowthSkeleton;
 import software.bernie.geckolib.model.GeoModel;
-
-import java.util.Locale;
 
 
 public class OldGrowthSkeletonModel extends GeoModel<OldGrowthSkeleton> {

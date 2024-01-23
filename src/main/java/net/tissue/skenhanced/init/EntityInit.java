@@ -8,32 +8,45 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.tissue.skenhanced.SkEnhanced;
-import net.tissue.skenhanced.entity.skeletons.DesertSkeleton;
-import net.tissue.skenhanced.entity.skeletons.IceSpikesSkeleton;
-import net.tissue.skenhanced.entity.skeletons.JungleSkeleton;
-import net.tissue.skenhanced.entity.skeletons.OldGrowthSkeleton;
+import net.tissue.skenhanced.entity.skeletons.*;
 
 public class EntityInit {
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, SkEnhanced.MOD_ID);
     // begin registry
 
 
-
-    public static final RegistryObject<EntityType<IceSpikesSkeleton>> ICE_SPIKE_SKELETON =
-            ENTITIES.register("ice_spike_skeleton", () -> EntityType.Builder.of(IceSpikesSkeleton::new, MobCategory.MONSTER)
-                    .sized(1f, 2.3f).build("ice_spike_skeleton"));
-
-    public static final RegistryObject<EntityType<OldGrowthSkeleton>> OLD_GROWTH_SKELETON =
-            ENTITIES.register("old_growth_skeleton", () -> EntityType.Builder.of(OldGrowthSkeleton::new, MobCategory.MONSTER)
-                    .sized(1f, 2.3f).build("old_growth_skeleton"));
+    public static final RegistryObject<EntityType<CaveSkeleton>> CAVE_SKELETON =
+            ENTITIES.register("cave_skeleton", () -> EntityType.Builder.of(CaveSkeleton::new, MobCategory.MONSTER)
+                    .sized(0.3f, 0.98f).build("cave_skeleton"));
 
     public static final RegistryObject<EntityType<DesertSkeleton>> DESERT_SKELETON =
             ENTITIES.register("desert_skeleton", () -> EntityType.Builder.of(DesertSkeleton::new, MobCategory.MONSTER)
                     .sized(0.6f, 1.99f).build("desert_skeleton"));
 
+    public static final RegistryObject<EntityType<FarmSkeleton>> FARM_SKELETON =
+            ENTITIES.register("farm_skeleton", () -> EntityType.Builder.of(FarmSkeleton::new, MobCategory.MONSTER)
+                    .sized(0.6f, 1.99f).build("farm_skeleton"));
+
+    public static final RegistryObject<EntityType<HoneySkeleton>> HONEY_SKELETON =
+            ENTITIES.register("honey_skeleton", () -> EntityType.Builder.of(HoneySkeleton::new, MobCategory.MONSTER)
+                    .sized(0.4f, 0.98f).build("honey_skeleton"));
+
+    public static final RegistryObject<EntityType<IceSpikesSkeleton>> ICE_SPIKE_SKELETON =
+            ENTITIES.register("ice_spike_skeleton", () -> EntityType.Builder.of(IceSpikesSkeleton::new, MobCategory.MONSTER)
+                    .sized(1f, 2.3f).build("ice_spike_skeleton"));
+
     public static final RegistryObject<EntityType<JungleSkeleton>> JUNGLE_SKELETON =
             ENTITIES.register("jungle_skeleton", () -> EntityType.Builder.of(JungleSkeleton::new, MobCategory.MONSTER)
                     .sized(0.6f, 1.99f).build("jungle_skeleton"));
+
+    public static final RegistryObject<EntityType<OceanSkeleton>> OCEAN_SKELETON =
+            ENTITIES.register("ocean_skeleton", () -> EntityType.Builder.of(OceanSkeleton::new, MobCategory.MONSTER)
+                    .sized(0.6f, 1.99f).build("ocean_skeleton"));
+
+    public static final RegistryObject<EntityType<OldGrowthSkeleton>> OLD_GROWTH_SKELETON =
+            ENTITIES.register("old_growth_skeleton", () -> EntityType.Builder.of(OldGrowthSkeleton::new, MobCategory.MONSTER)
+                    .sized(1f, 3.2f).build("old_growth_skeleton"));
+
 
 
 
