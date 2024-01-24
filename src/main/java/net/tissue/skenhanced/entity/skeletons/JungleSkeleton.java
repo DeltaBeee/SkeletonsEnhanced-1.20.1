@@ -11,6 +11,7 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.tissue.skenhanced.entity.skeletons.base.BaseSkeleton;
 import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.core.animatable.GeoAnimatable;
@@ -21,7 +22,7 @@ import software.bernie.geckolib.core.object.PlayState;
 
 public class JungleSkeleton extends BaseSkeleton implements GeoEntity {
 
-    public JungleSkeleton(EntityType<? extends AbstractSkeleton> pEntityType, Level pLevel) {
+    public JungleSkeleton(EntityType<? extends JungleSkeleton> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 

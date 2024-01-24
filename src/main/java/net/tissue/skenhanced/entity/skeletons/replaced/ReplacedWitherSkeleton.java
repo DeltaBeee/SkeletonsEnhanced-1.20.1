@@ -1,4 +1,4 @@
-package net.tissue.skenhanced.entity.skeletons;
+package net.tissue.skenhanced.entity.skeletons.replaced;
 
 import net.minecraft.world.entity.EntityType;
 import software.bernie.geckolib.animatable.GeoReplacedEntity;
@@ -8,11 +8,11 @@ import software.bernie.geckolib.core.animatable.instance.SingletonAnimatableInst
 import software.bernie.geckolib.core.animation.*;
 import software.bernie.geckolib.core.object.PlayState;
 
-public class ReplacedStray implements GeoReplacedEntity {
+public class ReplacedWitherSkeleton implements GeoReplacedEntity {
 
     @Override
     public EntityType<?> getReplacingEntityType() {
-        return EntityType.STRAY;
+        return EntityType.WITHER_SKELETON;
     }
 
     @Override

@@ -9,7 +9,7 @@ public class DesertSkeletonModel extends GeoModel<DesertSkeleton> {
 
     @Override
     public ResourceLocation getModelResource(DesertSkeleton animatable) {
-        return new ResourceLocation(SkEnhanced.MOD_ID, "geo/desert_skeleton.geo.json");
+        return new ResourceLocation(SkEnhanced.MOD_ID, "geo/desert_skeleton_" + animatable.isBurrowed()+ ".geo.json");
     }
 
     @Override
@@ -19,6 +19,6 @@ public class DesertSkeletonModel extends GeoModel<DesertSkeleton> {
 
     @Override
     public ResourceLocation getAnimationResource(DesertSkeleton animatable) {
-        return new ResourceLocation(SkEnhanced.MOD_ID, "animations/skeleton.animation.json");
+        return new ResourceLocation(SkEnhanced.MOD_ID, "animations/desert_skeleton.animation.json");
     }
 }

@@ -2,9 +2,8 @@ package net.tissue.skenhanced.entity.client.model;
 
 import net.minecraft.resources.ResourceLocation;
 import net.tissue.skenhanced.SkEnhanced;
-import net.tissue.skenhanced.entity.skeletons.ReplacedSkeleton;
+import net.tissue.skenhanced.entity.skeletons.replaced.ReplacedSkeleton;
 import software.bernie.geckolib.model.DefaultedEntityGeoModel;
-import software.bernie.geckolib.model.DefaultedGeoModel;
 
 public class ReplacedSkeletonModel extends DefaultedEntityGeoModel<ReplacedSkeleton> {
     public ReplacedSkeletonModel() {

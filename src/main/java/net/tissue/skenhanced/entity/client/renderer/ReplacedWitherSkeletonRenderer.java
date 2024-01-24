@@ -1,14 +1,10 @@
 package net.tissue.skenhanced.entity.client.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.world.entity.monster.Skeleton;
 import net.minecraft.world.entity.monster.WitherSkeleton;
-import net.tissue.skenhanced.entity.client.model.ReplacedSkeletonModel;
 import net.tissue.skenhanced.entity.client.model.ReplacedWitherSkeletonModel;
-import net.tissue.skenhanced.entity.skeletons.ReplacedSkeleton;
-import net.tissue.skenhanced.entity.skeletons.ReplacedWitherSkeleton;
+import net.tissue.skenhanced.entity.skeletons.replaced.ReplacedWitherSkeleton;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.renderer.GeoReplacedEntityRenderer;
 

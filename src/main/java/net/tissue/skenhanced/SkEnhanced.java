@@ -20,6 +20,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.RegistryObject;
 import net.tissue.skenhanced.entity.client.renderer.*;
+import net.tissue.skenhanced.event.ServerEvents;
 import net.tissue.skenhanced.init.*;
 import org.slf4j.Logger;
 
@@ -38,6 +39,7 @@ public class SkEnhanced {
         ItemInit.register(bus);
         TabInit.register(bus);
         EntityInit.register(bus);
+        MinecraftForge.EVENT_BUS.register(new ServerEvents());
         // registry end
         bus.addListener(this::commonSetup);
 
