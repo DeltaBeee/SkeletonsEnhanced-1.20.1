@@ -17,6 +17,7 @@ public class TItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        simpleItem(ItemInit.SPEEDOMETER);
         withExistingParent(ItemInit.CAVE_SKELETON_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ItemInit.CRIMSON_SKELETON_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ItemInit.DESERT_SKELETON_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));

@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "minecraft:mushroom_fields",
+  "spawners": {
+    "type": "skenhanced:mushroom_skeleton",
+    "weight": 10,
+    "minCount": 4,
+    "maxCount": 8
+  }
+}

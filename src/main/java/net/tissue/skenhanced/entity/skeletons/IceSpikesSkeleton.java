@@ -74,7 +74,7 @@ public class IceSpikesSkeleton extends BaseSkeleton implements GeoEntity {
     @Nullable
     @Override
     public MobEffectInstance getHitEffect() {
-        return new MobEffectInstance(EffectsInit.Blizzard.get(), 200, 0);
+        return new MobEffectInstance(EffectsInit.BLIZZARD.get(), 200, 0);
     }
 
     @Override

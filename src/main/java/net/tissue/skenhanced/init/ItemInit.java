@@ -1,16 +1,19 @@
 package net.tissue.skenhanced.init;
 
-import net.minecraftforge.common.ForgeSpawnEggItem;
-import net.minecraftforge.registries.RegistryObject;
-import net.tissue.skenhanced.SkEnhanced;
 import net.minecraft.world.item.Item;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
+import net.tissue.skenhanced.SkEnhanced;
+import net.tissue.skenhanced.item.SpeedometerItem;
 
 public class ItemInit {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SkEnhanced.MOD_ID);
     // right here
+
+    public static final RegistryObject<Item> SPEEDOMETER = ITEMS.register("speedometer", () -> new SpeedometerItem(new Item.Properties()));
 
     public static final RegistryObject<ForgeSpawnEggItem> CAVE_SKELETON_SPAWN_EGG = ITEMS.register("cave_skeleton_spawn_egg",
             () -> new ForgeSpawnEggItem(EntityInit.CAVE_SKELETON, 0x494949, 0xeaeaea, new Item.Properties()));

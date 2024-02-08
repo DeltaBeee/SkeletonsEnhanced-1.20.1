@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-23T02:21:34.1756598	Item Models: skenhanced
+// 1.20.1	2024-02-04T23:51:16.6631013	Item Models: skenhanced
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/skenhanced/models/item/cave_skeleton_spawn_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/skenhanced/models/item/crimson_skeleton_spawn_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/skenhanced/models/item/desert_skeleton_spawn_egg.json
@@ -9,4 +9,5 @@
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/skenhanced/models/item/mushroom_skeleton_spawn_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/skenhanced/models/item/ocean_skeleton_spawn_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/skenhanced/models/item/old_growth_skeleton_spawn_egg.json
+ae1eb042351dc0fdf14ed1aceebaeb5f70ca794a assets/skenhanced/models/item/speedometer.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/skenhanced/models/item/warped_skeleton_spawn_egg.json

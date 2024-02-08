@@ -9,6 +9,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.tissue.skenhanced.SkEnhanced;
 import net.tissue.skenhanced.entity.skeletons.*;
+import net.tissue.skenhanced.entity.skeletons.MushroomSkeleton;
 
 public class EntityInit {
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, SkEnhanced.MOD_ID);
